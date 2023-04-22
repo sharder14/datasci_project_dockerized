@@ -1,0 +1,39 @@
+#########################################
+
+#Build the image
+
+cd /home/pythonProjects/datasci
+
+docker build -t "datasci" .
+
+#Run the container
+
+docker run -p 8888:8888 --name=datasci -v $PWD/datasci:/datasci datasci
+
+##############################################
+#OR USE THIS bash script to deal with the container
+
+#Start the container
+bash power.sh start
+
+#Stop the container
+bash power.sh stop
+
+#Restart the container after it's been stopped
+bash power.sh restart
+
+#Show the Jupyter url for running container
+bash power.sh url
+
+#Delete the container
+bash power.sh delete
+
+############################################################
+#To run interactive in VSCode...
+
+Run the power.sh to get jupyter URL....
+
+Then create jupyter interactive window.. change kernal to
+    url where jupyter is running.
+
+

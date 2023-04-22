@@ -1,0 +1,7 @@
+numpy
+pandas
+Pillow
+plotly
+requests
+scikit-learn
+jupyterlab
